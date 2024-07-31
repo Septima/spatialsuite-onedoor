@@ -1,0 +1,115 @@
+/* s4's standard-css. Kopiér til /css/custom/s4.css, hvis du vil ændre i den */
+.inputcontainer {
+	width: 400px;
+    position:absolute;
+    right:5px;
+    top:0px;
+    z-index:500;
+    color: black;
+    text-align: left;
+}
+
+.inputcontainer-spacer {
+    list-style: none;
+    width: 400px;
+    height: 30px;
+}
+
+#panel-top .inputcontainer-spacer{
+ margin-top: -4px;
+}
+
+.septimasearch, .septimasearch.ssActive{
+    z-index: 10;
+}
+
+.septimasearch.inputcontainer .ssSearchResult{
+    width: 100%;
+}
+
+.septimasearch.inputcontainer.s4Hidden {
+    visibility: hidden;
+}
+
+#legendcontainer.legendcontainer{
+    z-index: 8;
+}
+.septimasearch > div > ul.better-autocomplete,
+.septimasearch > div > ul.better-autocomplete .ssDetailContent > ul {
+    position: relative;
+}
+.septimasearch > div > ul.better-autocomplete > li {
+ display: block;
+}
+.septimasearch > div > ul.better-autocomplete > li .ssDetailContent > ul > a {
+ display: inline;
+}
+
+.septimasearch .ssSearchHeader .ssSearchBackground,
+.septimasearch .ssSearchBackground input.ssInput,
+.septimasearch .ssSearchBackground .ssSearchIcon,
+.septimasearch .ssSearchBackground .ssCloseButton,
+.septimasearch .ssSearchHeader .ssPromotes,
+.septimasearch .ssSearchHeader .ssPromotes .ssPromotedIcon,
+.septimasearch .ssSearchBackground .ssSpinner {
+    height: 36px;
+    line-height: 36px;
+}
+.septimasearch .ssSearchHeader .ssSearchBackground:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.septimasearch ul.better-autocomplete>li.result {
+/* 	border-bottom: 0px solid rgba(236,240,241,1);	 */
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 12px;
+/* 	background-color: #FDFEFD;  */
+}
+.septimasearch ul.better-autocomplete>li.result.highlight {
+/* 	border-bottom: 0px solid rgba(236,240,241,1);	 */
+}
+
+
+.in-map-top-right.septimasearch {
+    border: 0;
+    -moz-box-shadow: 0 0 1px #aaa;
+    -webkit-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 4px #aaa;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 0px;
+    z-index: 3;
+}
+
+
+.in-map-top-right.septimasearch .ssSearchHeader .ssSearchBackground,
+.in-map-top-right.septimasearch .ssSearchBackground input.ssInput,
+.in-map-top-right.septimasearch .ssSearchBackground .ssSearchIcon,
+.in-map-top-right.septimasearch .ssSearchBackground .ssCloseButton,
+.in-map-top-right.septimasearch .ssSearchHeader .ssPromotes,
+.in-map-top-right.septimasearch .ssSearchHeader .ssPromotes .ssPromotedIcon,
+.in-map-top-right.septimasearch .ssSearchBackground .ssSpinner {
+    height: 38px;
+    line-height: 38px;
+}
+
+
+
+/* PADDING HACK */
+.septimasearch .ssDetailTitle {
+    padding: 12px 10px;
+}
+.septimasearch .ssDetailTitleImage {
+    float: left;
+    padding-left: 0;
+}
+
+.septimasearch .ssDetailTitleText {
+    padding-left: 32px;
+}
+
+

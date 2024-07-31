@@ -1,0 +1,15 @@
+/* Denne css klemmer inputfeltet i højden så den feks passer bedre ind i topbaren */
+.septimasearch .ssSearchHeader .ssSearchBackground,
+.septimasearch .ssSearchBackground input.ssInput,
+.septimasearch .ssSearchBackground .ssSearchIcon,
+.septimasearch .ssSearchBackground .ssCloseButton,
+.septimasearch .ssSearchHeader .ssPromotes,
+.septimasearch .ssSearchHeader .ssPromotes .ssPromotedIcon,
+.septimasearch .ssSearchBackground .ssSpinner {
+    height: 31px;
+    line-height: 31px;
+}
+
+.septimasearch{
+	border: 0;
+}
