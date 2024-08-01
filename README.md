@@ -2,8 +2,8 @@
 Søg i OneDoor i Spatial Suite
 
 ### Download modulet spatialsuite-onedoor:
-
-    https://github.com/Septima/spatialsuite-onedoor/archive/0.1.0.zip
+Seneste version
+    0.1.0: https://github.com/Septima/spatialsuite-onedoor/archive/0.1.0.zip
 
 ### Udpak modulet
 
