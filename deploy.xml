@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy>
-   <version>2.16.5</version>
-   <param name="spatialsuite.onedoor.version">2.16.5</param>
+   <version>0.1.0</version>
+   <param name="spatialsuite.onedoor.version">0.1.0</param>
 
    <stoponerror>true</stoponerror>
 

@@ -3,9 +3,9 @@
 <tool>
     <requires>
 		<file type="css"    name="[onedoor.search.version]/css/defaultView.css" />
-		<file type="script" name="[sonedoor.search.version]/[onedoor.search.build]" charset="utf-8"/>
+		<file type="script" name="[onedoor.search.version]/[onedoor.search.build]" charset="utf-8"/>
 
-        <file type="css"    name="/modules/onedoor/css/sonedoor.css?_=[spatialsuite.onedoor.version]" />
+        <file type="css"    name="/modules/onedoor/css/onedoor.css?_=[spatialsuite.onedoor.version]" />
         
 	    [if: isDefinedAndTrue("s4.header.small") ]
 	        <file type="css" name="/modules/onedoor/css/onedoorSmallHeader.css?_=[spatialsuite.onedoor.version]" />
@@ -28,51 +28,59 @@
         [endif]
         
  		<file type="script" name="/modules/onedoor/js/onedoor-plugin.js?_=[spatialsuite.onedoor.version]" charset="utf-8"/>
+ 		<file type="script" name="/modules/onedoor/js/icons.js?_=[spatialsuite.onedoor.version]" charset="utf-8"/>
+ 		<file type="script" name="/modules/onedoor/js/MapHandler.js?_=[spatialsuite.onedoor.version]" charset="utf-8"/>
         
     </requires>
     <displayname>s4Plugin</displayname>
     <src><![CDATA[
-            onedoor_init({
-                //  'panel-brand': Force s4 to panel-brand 
-                //  'menu': As the last menu in the menu line
-                //  'tool': Use the panel as specified in the profile
-                //  'panel-top': Force s4 to top menu
-                //  'default': same as map-top-right
-                //  'panel-middle': Force s4 to menu linie (right justified)
-                //  'map-top-right': SpS 4.1+ only
-                panel: 'default',
+            if (tool.jsonConfig && tool.jsonConfig.host && tool.jsonConfig.organisation && tool.jsonConfig.configuration) {
+                host = tool.jsonConfig.host;
+                organisation = tool.jsonConfig.organisation;
+                configuration = tool.jsonConfig.configuration;
 
-                //Result presentation
-                //  printconfig: standard, full_freetext, rotatet, rotatet_contact or html
-                //  blankbehavior: search or none  
-                //  autofocus: true or false. Default is false
-                //  forcedblurOnSelect: Force close of result list. Default is false
-	            //  zoomBuffer: Buffer when result is shown in map. Default is '100'
-                //  marginToBottom: Distance between bottom of resultlist and bottom af window. Default is 100
-                view: {
-	              limit: 20,
-	              blankbehavior: "search",
-	              autofocus: false,
-	              dynamiclayer: 'userdatasource',
-	              infoprofilequery: 'userdatasource',
-	              printconfig: 'rotated_contact',
-	              forcedblurOnSelect: 'false',
-	              zoomBuffer: '100',
-	              marginToBottom: 100,
-	              placeholder: "Søg" 
-	            },
-                
-                //Septima Search Server
-                s3searcher: {
-                    enabled: true,
-                    info: true,
-                    print: true,
-                    showLinkToWeb: true,
-                    host: "https://onedoor.test.septima.dk",
-                    organisation: "septima",
-                    configuration: "kommune"
-                },
-	            
-            });
+                onedoor_init({
+                    //  'panel-brand': Force s4 to panel-brand 
+                    //  'menu': As the last menu in the menu line
+                    //  'tool': Use the panel as specified in the profile
+                    //  'panel-top': Force s4 to top menu
+                    //  'default': same as map-top-right
+                    //  'panel-middle': Force s4 to menu linie (right justified)
+                    //  'map-top-right': SpS 4.1+ only
+                    panel: 'default',
+
+                    //Result presentation
+                    //  printconfig: standard, full_freetext, rotatet, rotatet_contact or html
+                    //  blankbehavior: search or none  
+                    //  autofocus: true or false. Default is false
+                    //  forcedblurOnSelect: Force close of result list. Default is false
+                    //  zoomBuffer: Buffer when result is shown in map. Default is '100'
+                    //  marginToBottom: Distance between bottom of resultlist and bottom af window. Default is 100
+                    view: {
+                    limit: 20,
+                    blankbehavior: "search",
+                    autofocus: false,
+                    dynamiclayer: 'userdatasource',
+                    infoprofilequery: 'userdatasource',
+                    printconfig: 'rotated_contact',
+                    forcedblurOnSelect: 'false',
+                    zoomBuffer: '100',
+                    marginToBottom: 100,
+                    placeholder: "Søg" 
+                    },
+                    
+                    //Septima Search Server
+                    s3searcher: {
+                        enabled: true,
+                        info: true,
+                        print: true,
+                        showLinkToWeb: true,
+                        host: host,
+                        organisation: organisation,
+                        configuration: configuration
+                    },
+                });
+            }
+
     ]]></src>
 </tool>
