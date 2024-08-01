@@ -1,15 +1,14 @@
 # spatialsuite-onedoor
 Søg i OneDoor i Spatial Suite
 
-### Download modulet spatialsuite-onedoor:
+### 1 Download modulet spatialsuite-onedoor:
 Seneste version  
       0.1.0: https://github.com/Septima/spatialsuite-onedoor/archive/0.1.0.zip
 
-### Udpak modulet
-
+### 2 Udpak modulet
 Udpak modulet i `modules/thirdparty/septima/onedoor`
 
-### Opdatér cbinfo.xml
+### 3 Opdatér cbinfo.xml
 ```xml
     <!-- ****************************************** --> 
     <!--  Septima                                   --> 
@@ -17,7 +16,7 @@ Udpak modulet i `modules/thirdparty/septima/onedoor`
     <module name="onedoor" dir="thirdparty/septima/onedoor" permissionlevel="public"/>
 ```
 
-### Inkludér i en profil  
+### 4 Inkludér i en profil  
 Husk at udfylde [XXX] med korrekt info  
 ```xml
     <tool module="onedoor" name="onedoor-plugin">
