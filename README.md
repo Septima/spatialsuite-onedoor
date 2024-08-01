@@ -20,13 +20,13 @@ Udpak modulet i `modules/thirdparty/septima/onedoor`
 ### Inkludér i en profil  
 Husk at udfylde [XXX] med korrekt info  
 ```xml
-        <tool module="onedoor" name="onedoor-plugin">
-            <jsonconfig>
-                {
-                    "host": "[API Host]",
-                    "organisation": "[Organisation]",
-                    "configuration": "[Konfiguration]"
-                }
-            </jsonconfig>
-        </tool>
+    <tool module="onedoor" name="onedoor-plugin">
+        <jsonconfig>
+            {
+                "host": "[API Host]",
+                "organisation": "[Organisation]",
+                "configuration": "[Konfiguration]"
+            }
+        </jsonconfig>
+    </tool>
 ```
